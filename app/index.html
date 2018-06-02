@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="" ng-app="MyApp">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MyApp</title>
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="app.css">
+    <!-- endbuild -->
+    
+  </head>
+  <body>
+    <!--[if IE]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    
+    <div class="container">
+      <div class="header">
+        <ul class="nav nav-pills pull-right">
+          <li ui-sref-active="active">
+            <a ui-sref="home">Home</a>
+          </li>
+          <li ui-sref-active="active">
+            <a ui-sref="about">About</a>
+          </li>
+          <li ui-sref-active="active">
+            <a ui-sref="contact">Contact</a>
+          </li>
+        </ul>
+        <h3 class="text-muted">MyApp</h3>
+      </div>
+
+      <div ui-view></div>
+
+      <div class="footer">
+        <p>♥ from the Yeoman team</p>
+      </div>
+    </div>
+    
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/angular/angular.js"></script>
+    <script src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="/bower_components/angular-animate/angular-animate.js"></script>
+    <script src="/bower_components/angular-resource/angular-resource.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    
+    
+    <!-- build:js scripts/app.js -->
+    <script src="app.js"></script>
+
+    <script type="text/javascript" src="modules/common/module.js"></script>
+    <script type="text/javascript" src="modules/common/controller/modalCtrls.js"></script>
+    <script type="text/javascript" src="modules/common/service/apiService.js"></script>
+    <script type="text/javascript" src="modules/common/service/layer.js"></script>
+
+    <script type="text/javascript" src="modules/home/module.js"></script>
+    <script type="text/javascript" src="modules/home/controller/homeCtrl.js"></script>
+
+    <script type="text/javascript" src="modules/about/module.js"></script>
+
+    <script type="text/javascript" src="modules/contact/module.js"></script>
+    <!-- endbuild -->
+    <!-- 模板文件 -->
+    <script type="text/javascript" src="scripts/templates.js"></script>
+  </body>
+</html>

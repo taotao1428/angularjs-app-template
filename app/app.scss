@@ -1,0 +1,104 @@
+$icon-font-path: './fonts/';
+// bower:scss
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+body, html{
+  width:100%;
+  height:100%;
+  margin:0;
+  padding: 0;
+}
+
+
+
+body{
+   font-family: "Microsoft YaHei","微软雅黑";
+}
+
+
+/*弹窗的通用样式修改 start*/
+.modal{
+  .modal-header{
+    border:none;
+    padding-bottom: 0px;
+    .close{
+      font-weight: 300;
+      font-size: 26px;
+      width:30px;
+      text-align: center;
+      margin-right:-8px;
+      margin-top:-7px;
+    }
+  }
+  .modal-content{
+    border-radius: 5px;
+    box-shadow: none;
+    word-wrap: break-word;
+  }
+  .modal-footer{
+    border:none;
+    padding-top:0;
+  }
+}
+
+/*弹窗的通用样式修改 end*/
+
+
+/* 为元素的出现与消失自定义动画 start */
+
+@keyframes ngShow{
+  from{
+    opacity: 0;
+  }to{
+    opacity: 1;
+  }
+}
+
+@keyframes heightChange{
+  from{
+    /*opacity: 0;*/
+  }to{
+    /*opacity: 0;*/
+    height: 0px;
+    display: none;
+  }
+}
+
+@keyframes fadeOut{
+  from{
+    opacity: 1;
+  }to{
+    opacity: 0;
+    display: none;
+  }
+}
+.body{
+  .ng-show{
+    animation: 0.5s ngShow;
+  }
+
+  .ng-enter{
+    animation: 0.5s ngShow;
+  }
+}
+
+
+/* 为元素的出现与消失自定义动画 end */
+
+/* 块状垂直居中 start */
+.vim-box{
+  display: inline-block;
+  width:0px;
+  height: 100%;
+  vertical-align: middle;
+}
+/* 块状垂直居中 start */
+
+/* bootstrap样式覆盖 start */
+
+label {
+  font-weight: normal;
+}
+
+/* bootstrap样式覆盖 end */

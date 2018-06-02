@@ -1,0 +1,25 @@
+{
+  "name": "test2",
+  "private": true,
+  "dependencies": {
+    "bootstrap-sass": "~3.3.5",
+    "angular": "1.7.0",
+    "angular-bootstrap": "2.5.0",
+    "angular-ui-router": "0.3.2",
+    "angular-animate": "1.7.0",
+    "angular-resource": "^1.7.0"
+  },
+  "overrides": {
+    "bootstrap-sass": {
+      "main": [
+        "assets/stylesheets/_bootstrap.scss",
+        "assets/fonts/bootstrap/*",
+        "assets/javascripts/bootstrap.js"
+      ]
+    }
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0"
+  }
+}
