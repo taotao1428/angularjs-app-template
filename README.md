@@ -75,8 +75,8 @@ this.add = function(name, config) {
 ### 使用方法
 ```
 !(function(angular) {
-	angular.module('Home')
-	.controller('homeCtrl', function($scope, layer) {
+  angular.module('Home')
+  .controller('homeCtrl', function($scope, layer) {
 
     var confirm = layer.confirm("是否继续？");
     confirm.result.then(function(){
@@ -84,6 +84,6 @@ this.add = function(name, config) {
     }, function(){
       console.log("取消");
     });
-	})
+  })
 })(angular)
 ```
