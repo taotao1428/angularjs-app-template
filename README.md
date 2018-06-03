@@ -1,5 +1,5 @@
 # angularjs-app-template
-根据自己的开发习惯做的angularjs应用开发脚手架。这个应用使用ui-router做路由，基于angular-boostrap库构建了layer服务，也搭建了一个apiService服务。
+根据自己的开发习惯做的angularjs应用开发脚手架。这个应用使用`ui-router`做路由，基于`angular-boostrap`库构建了layer服务，也搭建了一个`apiService`服务。
 
 
 ## 整体介绍
@@ -32,11 +32,11 @@
 因为弹出框是网页必不可少的元素，可以作为确认框，提示框，登录框以及更加复杂的弹出框。layer服务是借助angular-boostrap的模态框实现的。为了让各个模块可以根据自己的需求注册弹出框。我将layer服务写成provider的形式，这样每个模块就可以通过layerProvider注册自己的模块。
 
 ### 需要配置的参数
-* `templateUrl`: {string} **必须**弹出框的模板文件
-* `controller`: {string|function} 弹出框的控制器名或控制器，默认为`name + 'ModalCtrl'`。例如注册名为`tips`, 那默认控制器为`tipsModalCtrl`
-* `modalParams`: {object} 会注入到控制器的变量，默认为`{}`
+* `templateUrl`: `{string}` **必须**，弹出框的模板文件
+* `controller`: `{string|function}` 弹出框的控制器名或控制器，默认为`name + 'ModalCtrl'`。例如注册名为`tips`, 那默认控制器为`tipsModalCtrl`
+* `modalParams`: `{object}` 会注入到控制器的变量，默认为`{}`
 * `size`: 'sm','md', 'lg' 弹出框的尺寸，默认为`sm`
-* `windowClass`: {string} 在弹出框上加的类名，方便写样式
+* `windowClass`: `{string}` 在弹出框上加的类名，方便写样式
 * 其他的可以参考[angular-bootstrap](http://angular-ui.github.io/bootstrap/)
 
 ### 注册的实现代码
@@ -104,8 +104,8 @@ this.add = function(name, config) {
   "data" : {}
 }
 ```
-由于没有使用http协议的状态码，所以$http不能根据json数据中的status判断是否正确的获得了数据，所以我在$http的resolve中进一步处理结果。这样，如果请求成功，并且成功得到结果，apiService将可以直接resolve到数据；如果是请求失败或者请求没有成功得到结果，apiService将reject失败的原因。这样可以避免每次调用apiService时都要处理resp才能得到data；
-```
+由于没有使用http协议的状态码，所以`$http`不能根据json数据中的status判断是否正确的获得了数据，所以我在`$http`的resolve中进一步处理结果。这样，如果请求成功，并且成功得到结果，`apiService`将可以直接resolve到数据；如果是请求失败或者请求没有成功得到结果，`apiService`将reject失败的原因。这样可以避免每次调用`apiService`时都要处理resp才能得到data；
+```javascript
 function httpPromise(options) {
   return $http(options).then(successHandler, errHandler);
 }
